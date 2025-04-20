@@ -185,4 +185,15 @@ class AudioManager {
 }
 
 // Initialize audio manager
-const audioManager = new AudioManager(); 
+// const audioManager = new AudioManager(); 
+
+const sound = document.getElementById('sound');
+const playSound = () => {
+    sound.currentTime = 0; // to resest it
+    sound.play();
+};
+
+document.addEventListener('click', function(){
+    playSound();
+    console.log("clicked");
+});
