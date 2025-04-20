@@ -1,0 +1,212 @@
+/* Visitor Counter Styles */
+.visitor-counter {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: var(--card-background);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.visitor-counter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.visitor-icon {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.visitor-count {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* New Visitor Notification */
+.visitor-notification {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transform: translateX(200%);
+    opacity: 0;
+    z-index: 101;
+}
+
+.visitor-notification.show {
+    animation: slideIn 0.5s forwards, slideOut 0.5s forwards 3s;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 4rem 0;
+    background: var(--background-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.testimonial-info h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.testimonial-date {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.testimonial-content {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Testimonial Form */
+.testimonial-form {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    background: var(--card-background);
+    color: var(--text-color);
+}
+
+/* Social Sharing */
+.social-share {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.share-button {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.share-button:hover {
+    transform: translateY(-2px);
+    background: var(--accent-color);
+}
+
+.share-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    to {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.new-testimonial {
+    animation: pulse 1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .visitor-counter {
+        top: auto;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-share {
+        flex-wrap: wrap;
+    }
+} 

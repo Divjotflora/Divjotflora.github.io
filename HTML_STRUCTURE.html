@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="CSS_FOUNDATION.css">
+    <link rel="stylesheet" href="NAVIGATION_CSS.css">
+    <link rel="stylesheet" href="NAVIGATION.js">
+
+</head>
+<body>
+    <!-- AI Avatar Container (Fixed Position) -->
+    <div id="ai-avatar" class="avatar-container">
+        <!-- Avatar will be added here -->
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="tagline">Your Tagline Here</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    <!-- Profile image placeholder -->
+                </div>
+                <div class="bio">
+                    <p>Your biography goes here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project Card 1 -->
+                <article class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Project Title</h3>
+                    <p>Project description</p>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Project</a>
+                        <a href="#" class="btn">Source Code</a>
+                    </div>
+                </article>
+                <!-- More project cards can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <!-- Skill categories will be added here -->
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul class="skills-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <!-- More skill categories can be added -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+    /* Modern color scheme */
+    :root {
+        --primary-color: #2c3e50;
+        --accent-color: #3498db;
+        --text-color: #333;
+        --light-bg: #f8f9fa;
+        --footer-bg: #1a252f;
+    }
+
+    /* General styling improvements */
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    /* Skills section enhancement */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .skill-category {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .skill-category:hover {
+        transform: translateY(-5px);
+    }
+
+    .skill-category h3 {
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    .skills-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .skills-list li {
+        padding: 8px 0;
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .skills-list li:before {
+        content: "▹";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+    }
+
+    /* Contact section improvement */
+    .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        display: grid;
+        gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: var(--accent-color);
+        outline: none;
+    }
+
+    .btn {
+        background: var(--accent-color);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #2980b9;
+    }
+
+    /* Footer enhancement */
+    footer {
+        background: var(--footer-bg);
+        color: white;
+        padding: 40px 0;
+    }
+
+    .social-links {
+        margin-bottom: 20px;
+    }
+
+    .social-links a {
+        color: white;
+        font-size: 24px;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: var(--accent-color);
+    }
+
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        section {
+            padding: 60px 0;
+        }
+        
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-form {
+            padding: 0 20px;
+        }
+    }
+</style>
+

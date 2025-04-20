@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS_FOUNDATION.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <h1>Farigh</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="btn">Home</a>
+            <a href="about.html" class="btn">About</a>
+            <a href="projects.html" class="btn">Projects</a>
+            <a href="skills.html" class="btn active">Skills</a>
+            <a href="contact.html" class="btn">Contact</a>
+            <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-light">🌞</span>
+                <span class="theme-toggle-dark">🌙</span>
+            </button>
+        </div>
+        <button class="mobile-menu btn" id="mobileMenuBtn">Menu</button>
+    </nav>
+
+    <!-- AI Avatar Container -->
+    <div class="ai-avatar">
+        <div class="avatar-container">
+            <div class="avatar-image"></div>
+            <div class="avatar-message">Here are my technical skills!</div>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <h1>My Skills</h1>
+            <p>Technical expertise and competencies</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="skills-grid">
+            <div class="grid">
+                <!-- Frontend Skills -->
+                <div class="card animate-in">
+                    <h2>Frontend Development</h2>
+                    <ul class="skills-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="card animate-in">
+                    <h2>Backend Development</h2>
+                    <ul class="skills-list">
+                        <li>Python</li>
+                        <li>Node.js</li>
+                        <li>SQL</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="card animate-in">
+                    <h2>Tools & Technologies</h2>
+                    <ul class="skills-list">
+                        <li>Git</li>
+                        <li>Canva</li>
+                        <li>Adobe Suite</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="card animate-in">
+                    <h2>Soft Skills</h2>
+                    <ul class="skills-list">
+                        <li>Problem Solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Leadership</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="btn"><span>💻</span> GitHub</a>
+                <a href="#" class="btn"><span>📸</span> Instagram</a>
+            </div>
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="context-manager.js"></script>
+    <script src="visual-effects.js"></script>
+    <script src="audio-effects.js"></script>
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html> 

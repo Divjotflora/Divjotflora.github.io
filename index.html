@@ -1,72 +1,294 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS_FOUNDATION.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <h1>Farigh</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="btn active">🏠 Home</a>
+            <a href="about.html" class="btn">👤 About</a>
+            <a href="projects.html" class="btn">💼 Projects</a>
+            <a href="skills.html" class="btn">🎯 Skills</a>
+            <a href="contact.html" class="btn">📧 Contact</a>
+            <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-light">🌞</span>
+                <span class="theme-toggle-dark">🌙</span>
+            </button>
+        </div>
+        <button class="mobile-menu btn" id="mobileMenuBtn">Menu</button>
+    </nav>
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Babylon Template</title>
+    <!-- AI Avatar Container -->
+    <div class="ai-avatar">
+        <div class="avatar-container">
+            <div class="avatar-image">
+                <div class="avatar-face"></div>
+            </div>
+            <div class="avatar-message">Hi! I'm your AI assistant.</div>
+            <div class="avatar-actions">
+                <button class="avatar-action-btn" data-action="tour">
+                    <span>🚶‍♂️</span> Site Tour
+                </button>
+                <button class="avatar-action-btn" data-action="help">
+                    <span>❓</span> Get Help
+                </button>
+                <button class="avatar-action-btn" data-action="navigate">
+                    <span>🧭</span> Navigation
+                </button>
+                <button class="avatar-action-btn" data-action="theme">
+                    <span>🎨</span> Change Theme
+                </button>
+            </div>
+        </div>
+    </div>
 
-        <style>
-            html, body {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            #renderCanvas {
-                width: 100%;
-                height: 100%;
-                touch-action: none;
-            }
-        </style>
+    <!-- Hero Section with Parallax -->
+    <header class="hero" data-ambient="home">
+        <div class="container">
+            <div class="parallax" data-speed="0.5">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Full-Stack Developer & Creative Problem Solver</p>
+            </div>
+            <!-- Decorative SVG Elements -->
+            <svg class="animate-svg" width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" fill="none"/>
+                <path d="M30 50 L70 50" stroke="white" stroke-width="2"/>
+                <path d="M50 30 L50 70" stroke="white" stroke-width="2"/>
+            </svg>
+        </div>
+    </header>
 
-        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <main class="container">
+        <!-- Featured Projects Section -->
+        <section class="featured-projects" data-ambient="projects">
+            <h2 class="parallax" data-speed="0.3">Featured Projects</h2>
+            <div class="grid">
+                <article class="card animate-in">
+                    <div class="card-icon">🚀</div>
+                    <h3>ANGRY BIRDS GAME</h3>
+                    <p>This is a 2D physics-based game inspired by Angry Birds, built using Java and the libGDX framework. Players launch birds from a slingshot to destroy structures and defeat pigs.</p>
+                    <a href="projects.html" class="btn">View Project →</a>
+                </article>
+                <article class="card animate-in">
+                    <div class="card-icon">💡</div>
+                    <h3>NEBULA CORE</h3>
+                    <p>The NebulaCore Database (NCDB) was created to merge astronomical databases such as
+                        asteroids, star systems, exoplanets, etc. It is a single place to find and relate every central
+                        astronomically relevant entity. The system will be used by astronomers, space agencies,
+                        andresearch institutions for scientific analysis, satellite tracking, and mission planning.</p>
+                    <a href="projects.html" class="btn">View Project →</a>
+                </article>
+                <article class="card animate-in">
+                    <div class="card-icon">💻</div>
+                    <h3>WEB BASED PHYSICS SIMULATION</h3>
+                    <p>This is a web-based physics simulation tool that allows users to explore and interact with various physical phenomena. It provides a platform for learning and experimenting with concepts in physics, mechanics, and dynamics.</p>
+                    <a href="projects.html" class="btn">View Project →</a>
+                </article>
+            </div>
+        </section>
 
-    </head>
+        <!-- Skills Preview with SVG Icons -->
+        <section class="skills-preview" data-ambient="skills">
+            <h2 class="parallax" data-speed="0.2">Key Skills</h2>
+            <div class="grid">
+                <div class="card animate-in">
+                    <svg class="animate-svg" width="50" height="50" viewBox="0 0 50 50">
+                        <rect x="10" y="10" width="30" height="30" stroke="var(--secondary-color)" stroke-width="2" fill="none"/>
+                        <circle cx="25" cy="25" r="10" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="card animate-in">
+                    <svg class="animate-svg" width="50" height="50" viewBox="0 0 50 50">
+                        <polygon points="25,5 45,40 5,40" stroke="var(--secondary-color)" stroke-width="2" fill="none"/>
+                        <circle cx="25" cy="25" r="10" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Node.js</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-   <body>
+    <!-- Add before the testimonials section -->
+    <section class="disclosure-section" id="skills-detail">
+        <div class="container">
+            <div class="content-breadcrumb">
+                <span>Skills</span>
+                <span class="breadcrumb-separator">›</span>
+                <span>Detailed Overview</span>
+            </div>
 
-	<canvas id="renderCanvas"></canvas>
+            <div class="accordion-mode">
+                <!-- Frontend Development -->
+                <div class="content-chunk importance-high" id="frontend-skills">
+                    <div class="chunk-header" tabindex="0" aria-expanded="false">
+                        <div class="chunk-title">
+                            <div class="chunk-icon">🎨</div>
+                            Frontend Development
+                        </div>
+                        <div class="chunk-indicator">▼</div>
+                    </div>
+                    <div class="chunk-content" aria-hidden="true">
+                        <div class="content-summary">
+                            <div class="summary-title">Key Technologies</div>
+                            <p>Modern frontend development with focus on responsive design and performance optimization.</p>
+                        </div>
+                        <ul>
+                            <li><span class="memory-icon">⚡</span>HTML5 & CSS3</li>
+                            <li><span class="memory-icon">🔄</span>JavaScript</li>
+                            <li><span class="memory-icon">⚛️</span>React</li>
+                        </ul>
+                        <div class="reading-progress">
+                            <div class="reading-bar">
+                                <div class="reading-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	<script>
-        const canvas = document.getElementById("renderCanvas"); // Get the canvas element
-        const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
-        const createScene = function () {
-            // Creates a basic Babylon Scene object
-            const scene = new BABYLON.Scene(engine);
-            // Creates and positions a free camera
-            const camera = new BABYLON.FreeCamera("camera1", 
-                new BABYLON.Vector3(0, 5, -10), scene);
-            // Targets the camera to scene origin
-            camera.setTarget(BABYLON.Vector3.Zero());
-            // This attaches the camera to the canvas
-            camera.attachControl(canvas, true);
-            // Creates a light, aiming 0,1,0 - to the sky
-            const light = new BABYLON.HemisphericLight("light", 
-                new BABYLON.Vector3(0, 1, 0), scene);
-            // Dim the light a small amount - 0 to 1
-            light.intensity = 0.7;
-            // Built-in 'sphere' shape.
-            const sphere = BABYLON.MeshBuilder.CreateSphere("sphere", 
-                {diameter: 2, segments: 32}, scene);
-            // Move the sphere upward 1/2 its height
-            sphere.position.y = 1;
-            // Built-in 'ground' shape.
-            const ground = BABYLON.MeshBuilder.CreateGround("ground", 
-                {width: 6, height: 6}, scene);
-            return scene;
-        };
-        const scene = createScene(); //Call the createScene function
-        // Register a render loop to repeatedly render the scene
-        engine.runRenderLoop(function () {
-                scene.render();
-        });
-        // Watch for browser/canvas resize events
-        window.addEventListener("resize", function () {
-                engine.resize();
-        });
-	</script>
+                <!-- Backend Development -->
+                <div class="content-chunk importance-high" id="backend-skills">
+                    <div class="chunk-header" tabindex="0" aria-expanded="false">
+                        <div class="chunk-title">
+                            <div class="chunk-icon">⚙️</div>
+                            Backend Development
+                        </div>
+                        <div class="chunk-indicator">▼</div>
+                    </div>
+                    <div class="chunk-content" aria-hidden="true">
+                        <div class="content-summary">
+                            <div class="summary-title">Core Competencies</div>
+                            <p>Server-side development with emphasis on scalability and security.</p>
+                        </div>
+                        <ul>
+                            <li><span class="memory-icon">🐍</span>Python</li>
+                            <li><span class="memory-icon">📦</span>Node.js</li>
+                            <li><span class="memory-icon">🗄️</span>PostgreSQL</li>
+                        </ul>
+                        <div class="reading-progress">
+                            <div class="reading-bar">
+                                <div class="reading-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-   </body>
+                <!-- DevOps & Tools -->
+                <div class="content-chunk importance-medium" id="devops-skills">
+                    <div class="chunk-header" tabindex="0" aria-expanded="false">
+                        <div class="chunk-title">
+                            <div class="chunk-icon">🔧</div>
+                            Other Languages & Skills
+                        </div>
+                        <div class="chunk-indicator">▼</div>
+                    </div>
+                    <div class="chunk-content" aria-hidden="true">
+                        <div class="content-summary">
+                            <div class="summary-title">Development Operations</div>
+                            <p>Modern development workflow and deployment strategies.</p>
+                        </div>
+                        <ul>
+                            <li><span class="memory-icon"></span>C, C++, Java</li>
+                            <li><span class="memory-icon"></span>Canva, Adobe Suite</li>
+                            <li><span class="memory-icon"></span>Figma, Blender</li>
+                        </ul>
+                        <div class="reading-progress">
+                            <div class="reading-bar">
+                                <div class="reading-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</html>
+    <!-- Add before the footer -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What People Say</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonials will be dynamically inserted here -->
+            </div>
+
+            <div class="testimonial-form">
+                <h3>📝 Share Your Experience</h3>
+                <form id="testimonialForm">
+                    <div class="form-group">
+                        <label for="name">👤 Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">💼 Role</label>
+                        <input type="text" id="role" name="role" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">💭 Your Message</label>
+                        <textarea id="content" name="content" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">✉️ Submit Testimonial</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add social sharing buttons to project cards -->
+    <div class="social-share">
+        <button class="share-button" data-platform="twitter">
+            <span>🐦</span> Tweet
+            <span class="share-count">0</span>
+        </button>
+        <button class="share-button" data-platform="linkedin">
+            <span>💼</span> Share
+            <span class="share-count">0</span>
+        </button>
+        <button class="share-button" data-platform="facebook">
+            <span>👍</span> Share
+            <span class="share-count">0</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="btn"><span>📦</span> GitHub</a>
+                <a href="#" class="btn"><span>📸</span> Instagram</a>
+            </div>
+            <p>© 2025 My Portfolio. All rights reserved. <span class="footer-icon">❤️</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="context-manager.js"></script>
+    <script src="visual-effects.js"></script>
+    <script src="audio-effects.js"></script>
+    <link rel="stylesheet" href="avatar.css">
+    <script src="avatar.js"></script>
+    <link rel="stylesheet" href="social-features.css">
+    <script src="social-features.js"></script>
+    <link rel="stylesheet" href="memory-optimization.css">
+    <script src="memory-optimization.js"></script>
+</body>
+</html> 

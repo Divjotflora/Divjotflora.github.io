@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS_FOUNDATION.css">
+    <link rel="stylesheet" href="memory-optimization.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <h1>Farigh</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="btn">🏠 Home</a>
+            <a href="about.html" class="btn active">👤 About</a>
+            <a href="projects.html" class="btn">💼 Projects</a>
+            <a href="skills.html" class="btn">🎯 Skills</a>
+            <a href="contact.html" class="btn">📧 Contact</a>
+            <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-light">🌞</span>
+                <span class="theme-toggle-dark">🌙</span>
+            </button>
+        </div>
+        <button class="mobile-menu btn" id="mobileMenuBtn">Menu</button>
+    </nav>
+
+    <!-- AI Avatar Container -->
+    <div class="ai-avatar">
+        <div class="avatar-container">
+            <div class="avatar-image"></div>
+            <div class="avatar-message">Learn more about me!</div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="about-section">
+            <h1>👋 About Me</h1>
+            
+            <div class="content-chunk importance-high">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">👨‍💻</div>
+                        Journey
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <p>I was raised in Oman, where I cultivated a strong foundation in academics and extracurriculars. My school years were marked by several academic and sports accolades, including the privilege of representing Oman in the ACC Under-16 cricket tournaments. My interest in technology led me to IIIT Delhi, where I'm currently pursuing my undergraduate studies.Here, I developed a keen interest in creating interactive and meaningful user experiences through a blend of coding and design and occassionally, I find creative expression through poetry. </p>
+                </div>
+            </div>
+
+            <div class="content-chunk importance-high">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">🎓</div>
+                        Education
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <div class="education-entry">
+                        <p class="education-line">ISM'23</p>
+                        <p class="education-line">Pursuing B.Tech in Computer Science and Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-chunk importance-medium">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">🌟</div>
+                        Interests & Hobbies
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <ul>
+                        <li>🎮 Gaming</li>
+                        <li>📷 Photography</li>
+                        <li>✈️ Traveling</li>
+                        <li>🎨 Poetry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="btn"><span>📦</span> GitHub</a>
+                <a href="#" class="btn"><span>📸</span> Instagram</a>
+            </div>
+            <p>© 2025 My Portfolio. All rights reserved. <span class="footer-icon">❤️</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="context-manager.js"></script>
+    <script src="memory-optimization.js"></script>
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

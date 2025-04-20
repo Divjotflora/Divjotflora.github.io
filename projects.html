@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS_FOUNDATION.css">
+    <link rel="stylesheet" href="memory-optimization.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <h1>Farigh</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="btn">🏠 Home</a>
+            <a href="about.html" class="btn">👤 About</a>
+            <a href="projects.html" class="btn active">💼 Projects</a>
+            <a href="skills.html" class="btn">🎯 Skills</a>
+            <a href="contact.html" class="btn">📧 Contact</a>
+            <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-light">🌞</span>
+                <span class="theme-toggle-dark">🌙</span>
+            </button>
+        </div>
+        <button class="mobile-menu btn" id="mobileMenuBtn">Menu</button>
+    </nav>
+
+    <!-- AI Avatar Container -->
+    <div class="ai-avatar">
+        <div class="avatar-container">
+            <div class="avatar-image"></div>
+            <div class="avatar-message">Check out my projects!</div>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <h1>🚀 My Projects</h1>
+            <p>A showcase of my best work</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="projects-section">
+            <h1>🚀 My Projects</h1>
+            
+            <div class="content-chunk importance-high">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">💻</div>
+                        Computer Architecture & Organization Project
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <div class="project-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Assembler and Simulator</h3>
+                        <p>Simple Assembler based on a custom ISA using Python
+                            Assembler reads the assembly program from input text file and generates the binary(if there are no errors) as an output text file. If there are errors, the assembler generates the error notifications along with the line number on which the error was encountered as an output text file.</p>
+                        <div class="tech-stack">
+                            <span>⚛️ Python</span>
+                            <span>🔷 Knowledge from the CSE 112 lectures</span>
+                        </div>
+                        <a href="#" class="btn">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-chunk importance-high">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">💾</div>
+                        Datbase Management
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <div class="project-card">
+                        <div class="card-icon">💾</div>
+                        <h3>Nebula Core</h3>
+                        <p>The NebulaCore Database (NCDB) was created to merge astronomical databases such as
+                            asteroids, star systems, exoplanets, etc. It is a single place to find and relate every central
+                            astronomically relevant entity. The system will be used by astronomers, space agencies,
+                            andresearch institutions for scientific analysis, satellite tracking, and mission planning.</p>
+                        <div class="tech-stack">
+                            <span>🔷 PostgreSQL</span>
+                            <span>🔷 Python</span>
+                        </div>
+                        <a href="#" class="btn">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-chunk importance-medium">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">🎮</div>
+                        Game Development
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <div class="project-card">
+                        <div class="card-icon">🎮</div>
+                        <h3>ANGRY BIRDS GAME</h3>
+                        <p>This is a 2D physics-based game inspired by Angry Birds, built using Java and the libGDX framework. Players launch birds from a slingshot to destroy structures and defeat pigs.</p>
+                        <div class="tech-stack">
+                            <span>🎯 Java</span>
+                            <span>🔷 LibGDX</span>
+                            <span>🔷 Maven</span>
+                        </div>
+                        <a href="#" class="btn">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-chunk importance-medium">
+                <div class="chunk-header" tabindex="0" aria-expanded="false">
+                    <div class="chunk-title">
+                        <div class="chunk-icon">🌐</div>
+                        Web Development
+                    </div>
+                    <div class="chunk-indicator">▼</div>
+                </div>
+                <div class="chunk-content">
+                    <div class="project-card">
+                        <div class="card-icon">🌐</div>
+                        <h3>Web Physics Simulator</h3>
+                        <p>Built upon cannon.js and Babylon.js, this website aims to be an accessible and intuitive source of reliable replication of a few natural phenomena.</p>
+                        <div class="tech-stack">
+                            <span>🎯 HTML, CSS, JavaScript</span>
+                            <span>🔷 cannon.js, Babylon.js</span>
+                        </div>
+                        <a href="#" class="btn">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="btn"><span>📦</span> GitHub</a>
+                <a href="#" class="btn"><span>📸</span> Instagram</a>
+            </div>
+            <p>© 2025 My Portfolio. All rights reserved. <span class="footer-icon">❤️</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="context-manager.js"></script>
+    <script src="memory-optimization.js"></script>
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html> 

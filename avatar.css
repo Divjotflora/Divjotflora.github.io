@@ -1,0 +1,147 @@
+/* Avatar Container Styles */
+.ai-avatar {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.avatar-container {
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 300px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.avatar-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Avatar Image Styles */
+.avatar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-face {
+    font-size: 24px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Avatar States */
+.avatar-image[data-state="happy"] .avatar-face::after {
+    content: "😊";
+}
+
+.avatar-image[data-state="thinking"] .avatar-face::after {
+    content: "🤔";
+}
+
+.avatar-image[data-state="excited"] .avatar-face::after {
+    content: "🎉";
+}
+
+.avatar-image[data-state="helpful"] .avatar-face::after {
+    content: "💡";
+}
+
+/* Message Bubble */
+.avatar-message {
+    background: var(--card-background);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    position: relative;
+    flex-grow: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.avatar-message.typing::after {
+    content: "...";
+    animation: typing 1s infinite;
+}
+
+/* Avatar Actions Menu */
+.avatar-actions {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: var(--card-background);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 150px;
+}
+
+.avatar-actions.show {
+    display: flex;
+}
+
+.avatar-action-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar-action-btn:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Animations */
+@keyframes typing {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.avatar-container.greeting {
+    animation: bounce 1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-avatar {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .avatar-container {
+        max-width: 250px;
+    }
+} 
